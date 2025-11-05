@@ -1,17 +1,32 @@
 applications:
-  apps:
-    namespace: argocd
-    project: default
-    sources:
-      - repoURL: https://github.com/sektor1100/test_argocd.git
-        path: charts/apps
-        helm:
-         valueFiles:
-          - /values/apps.yaml
-    destination:
-      server: https://kubernetes.default.svc
-      namespace: argocd
-    syncPolicy:
-      automated:
-        prune: false
-        selfHeal: true
+    apps:
+        namespace: ENC[AES256_GCM,data:8ZBK4UBN,iv:eZjnooJcbYNTYPOyLB+ylfjk7T0HlXnP4qv84hiKCfw=,tag:qe6cLzLB1h20MM4ARTTCTQ==,type:str]
+        project: ENC[AES256_GCM,data:iC2BHkBq2w==,iv:YDLf4ENGgwW6F7SwYDZ47edlHfS4zDkInCvvnb5HaRA=,tag:R7GX17zAp1nwQiqfdQsBBg==,type:str]
+        sources:
+            - repoURL: ENC[AES256_GCM,data:PmCMUPCwoWfJHUM/CEhYumAAmEAi2VplRZNvKeu8byH2TNUwgaLoyIwvhbac,iv:iUjpvesJCgrMx+5G/Ekhce+3qtXn/Vj93rNcO7TfwsE=,tag:bxe65oB1dDKxI1wKfIR5ag==,type:str]
+              path: ENC[AES256_GCM,data:5rueSia8qUhUXMQ=,iv:LP8wesuLofwB33EpCKI8CSwRqCDh87bJ/fOJnl2f5rU=,tag:vYzJwtyF6AMu5Otsy8+VZQ==,type:str]
+              helm:
+                valueFiles:
+                    - ENC[AES256_GCM,data:b7c9+WvKYlm77dBPqCR9+KY=,iv:DBWwERe1tphiRXlDd/W0NAmMdcriR0HJY/ScyX4K5Nw=,tag:cQY/Nbo4yxdbGPCCIY54Bg==,type:str]
+        destination:
+            server: ENC[AES256_GCM,data:nxetyUzA4Uw9IRaYXNMOc+zk7jYAH21PkphLzW7W,iv:aCt+Kcra11OATzVUxYlu3pT1UlmV/35LOPLc740IWaY=,tag:RRQlArVseTYZ7MDIMm5ovQ==,type:str]
+            namespace: ENC[AES256_GCM,data:d2lRh3Dd,iv:/AuWAYka9A3E7qLyHBRIzw422QzXHeCXqbGlP73vIQI=,tag:FFHeZ4hPK6ONxXBbKFc8oQ==,type:str]
+        syncPolicy:
+            automated:
+                prune: ENC[AES256_GCM,data:F2V1cWw=,iv:MI4tpEwqTEh53j7h4LEcgyK1SlfteJz7sGKvpvo4Z3Q=,tag:zNzN6ZPJOoSSnH4QsDSikw==,type:bool]
+                selfHeal: ENC[AES256_GCM,data:ocGZIw==,iv:4vYzcD+1wDpVULe/X3wa0/4AVO2cDktWPw5VQDsJ5ak=,tag:IN2WVbJX6qwHn8eAzS6tmA==,type:bool]
+sops:
+    age:
+        - recipient: age1sydhj38yct5swy68rdrjuszg0gqp395lsxqyml8fmwmf8t75zp3qxd8rvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBYS1FFMHJIZU9oc0tjVEZN
+            VE53RjZ2Z2YxTEx2blpCbEpYREVyMUdvU0VFCmVFMWpETTVuZDA1WTIwQldmSFVT
+            Y01FSnE1KzlvdFdBRlJZbk9XTnp0RzgKLS0tIFNJOUY2aFJzNHRNdGNsNEZZbTFE
+            THM3eWh5Z0Z1a3c2Zjdpd3FDSEZGYVkKRObdrDAGNeuIf87EVTg1v/HkC96TiKpv
+            LOt6ZlvD306GJWG+pCQd3Loyg/EihQe+BNlJELOIoOVEJIfExXD0nQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2025-11-05T12:12:54Z"
+    mac: ENC[AES256_GCM,data:M8UNIJr47o5XaH4Jn/jxijEDpsqQ3SKIf/n8HRAwRkU5c8AD7pihmfc1GFbMPTiU3mbucp0bp0bo/gRaQev6KoQB+M69ocnUHc9D9WLcDLDtO0PAQKsyndsIQxcB6/gP9mzEOa99RQT5qB0flVrCH8BWDwmifptETMa2rn2fJtA=,iv:6UKhc5VuFgFyhAiFZvAQTRw5Lpn8oZ7vZjPUOICcnOQ=,tag:l8tG0cmAmvNKZU3x2Qmg1Q==,type:str]
+    unencrypted_suffix: _unencrypted
+    version: 3.11.0
