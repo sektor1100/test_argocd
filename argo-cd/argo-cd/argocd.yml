@@ -1,0 +1,8 @@
+configs:
+  repositories:
+    infra:
+      password: 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
+      project: default
+      type: git
+      url: https://github.com/sektor1100/test_argocd.git
+      username: argo-cd

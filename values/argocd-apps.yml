@@ -1,0 +1,17 @@
+applications:
+  apps:
+    namespace: argocd
+    project: default
+    sources:
+      - repoURL: https://github.com/sektor1100/test_argocd.git
+        path: charts/apps
+        helm:
+         valueFiles:
+          - /values/apps.yaml
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: argocd
+    syncPolicy:
+      automated:
+        prune: false
+        selfHeal: true
