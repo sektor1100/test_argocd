@@ -532,7 +532,7 @@ staticSitePVC: ""
 service:
   ## @param service.type Service type
   ##
-  type: ""
+  type: "NodePort"
   ## @param service.ports.http Service HTTP port
   ## @param service.ports.https Service HTTPS port
   ##
