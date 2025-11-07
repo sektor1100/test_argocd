@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-custom-nginx
+  namespace: argocd
+spec:
+  project: default
+  source:
+    path: charts/nginx  # Путь к chart'у в вашем репозитории
+    repoURL: {{.Values.spec.source.repoURL }} # https://github.com/your-username/my-argocd-apps.git  # ВАШ репозиторий
+    targetRevision: {{.Values.spec.source.targetRevision }}
+    helm:
+      # Указываем использовать values.yaml из репозитория
+      valueFiles:
+        - values.yaml
+  destination:
+    server: {{.Values.spec.destination.server }} #https://kubernetes.default.svc
+    namespace: custom-nginx
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
