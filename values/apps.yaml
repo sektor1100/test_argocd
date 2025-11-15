@@ -1,6 +1,0 @@
-spec:
-  source:
-    repoURL: https://github.com/sektor1100/test_argocd.git
-    targetRevision: HEAD
-  destination:
-    server: https://kubernetes.default.svc

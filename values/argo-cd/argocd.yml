@@ -1,0 +1,8 @@
+configs:
+  repositories:
+    infra:
+      #password: ""
+      project: default
+      type: git
+      url: https://github.com/sektor1100/test_argocd.git
+      #username: ""
