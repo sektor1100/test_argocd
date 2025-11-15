@@ -1,0 +1,17 @@
+applications:
+  test_app_1:
+    namespace: argocd
+    project: default
+    sources:
+      - repoURL: https://github.com/sektor1100/test_argocd.git
+        path: enviroments/cluster_minikube
+        helm:
+         valueFiles:
+          - /values/cluster_minikube/values.yaml # путь относительно корня репозитория
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: argocd
+    syncPolicy:
+      automated:
+        prune: false
+        selfHeal: true
