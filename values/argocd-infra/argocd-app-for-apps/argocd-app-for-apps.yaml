@@ -1,0 +1,17 @@
+applications:
+  argocd-app-for-apps:
+    namespace: argocd
+    project: default
+    sources:
+      - repoURL: https://github.com/sektor1100/test_argocd.git
+        path: enviroments/argocd-infra/argocd-app-for-apps
+        helm: 
+         valueFiles:
+          - values/argocd-infra/argocd-app-for-apps/apps.yaml # путь относительно корня репозитория где находятся файл с приложениями
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: argocd
+    syncPolicy:
+      automated:
+        prune: false
+        selfHeal: true
