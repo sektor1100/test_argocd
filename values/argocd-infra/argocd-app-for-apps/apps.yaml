@@ -1,17 +1,17 @@
-applications: {}
-  # test-app-1:
-  #   namespace: argocd
-  #   project: default
-  #   sources:
-  #     - repoURL: https://github.com/sektor1100/test_argocd.git
-  #       path: enviroments/cluster-minikube # путь до чарта с конретным окружением (кластером)
-  #       helm:
-  #        valueFiles:
-  #         - /values/cluster-minikube/values.yaml # путь относительно корня репозитория где находятся файл с переменными для этого приложения
-  #   destination:
-  #     server: https://kubernetes.default.svc
-  #     namespace: argocd
-  #   syncPolicy:
-  #     automated:
-  #       prune: false
-  #       selfHeal: true
+applications: 
+  test-app-1:
+    namespace: argocd
+    project: default
+    sources:
+      - repoURL: https://github.com/sektor1100/test_argocd.git
+        path: enviroments/cluster-minikube # путь до чарта с конретным окружением (кластером)
+        helm:
+         valueFiles:
+          - /values/cluster-minikube/values.yaml # путь относительно корня репозитория где находятся файл с переменными для этого приложения
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: argocd
+    syncPolicy:
+      automated:
+        prune: false
+        selfHeal: true
